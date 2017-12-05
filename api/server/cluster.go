@@ -418,6 +418,14 @@ func (c *clusterApi) shutdown(w http.ResponseWriter, r *http.Request) {
 	c.sendNotImplemented(w, method)
 }
 
+// swagger:route GET /cluster/versions cluster versions listVersions
+//
+// Lists API versions supported by this cluster.
+//
+// This will show all supported versions of the API by this cluster.
+//
+//     Responses:
+//       200: []string
 func (c *clusterApi) versions(w http.ResponseWriter, r *http.Request) {
 	versions := []string{
 		cluster.APIVersion,

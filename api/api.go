@@ -112,17 +112,20 @@ type TunnelConfig struct {
 }
 
 // Cluster represents the state of the cluster.
+//
+// swagger:model Cluster
 type Cluster struct {
 	Status Status
 
-	// Id is the ID of the cluster.
+	// Id of the cluster.
+	//
+	// required: true
 	Id string
 
-	// NodeId is the ID of the node on which this cluster object
-	// is initialized
+	// Id of the node on which this cluster object is initialized
 	NodeId string
 
-	// Nodes is an array of all the nodes in the cluster.
+	// array of all the nodes in the cluster.
 	Nodes []Node
 
 	// Logging url for the cluster.

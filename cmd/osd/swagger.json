@@ -1,0 +1,47 @@
+{
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "OpenStorage is a clustered implementation of the Open Storage specification and relies on the Docker runtime.\nIt allows you to run stateful services in Docker in a multi-host environment.\nIt plugs into Docker volumes to provide storage to a container and plugs into Swarm to operate in a clustered environment.",
+    "title": "OSD API.",
+    "termsOfService": "there are no TOS at this moment, use at your own risk we take no responsibility",
+    "contact": {
+      "name": "Luis Pabon",
+      "email": "luis@portworx.com"
+    },
+    "license": {
+      "name": "APACHE2",
+      "url": "https://opensource.org/licenses/Apache-2.0"
+    },
+    "version": "1.0.0"
+  },
+  "host": "localhost",
+  "basePath": "/v1",
+  "paths": {
+    "/cluster/versions": {
+      "get": {
+        "description": "This will show all supported versions of the API by this cluster.",
+        "tags": [
+          "cluster",
+          "versions"
+        ],
+        "summary": "Lists API versions supported by this cluster.",
+        "operationId": "listVersions",
+        "responses": {
+          "200": {
+            "$ref": "#/responses/string"
+          }
+        }
+      }
+    }
+  }
+}
