@@ -1,4 +1,4 @@
-//go:generate swagger generate spec -o swagger.json
+//go:generate swagger generate spec -m -o swagger.json
 
 // Package classification OSD API.
 //
